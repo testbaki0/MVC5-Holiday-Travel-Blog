@@ -1,0 +1,50 @@
+﻿@using TatilSeyahatMVC.Models.Siniflar
+@model TatilSeyahatMVC.Models.Siniflar.Admin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Master login Form Responsive Widget Template  :: w3layouts</title>
+
+    <link href="~/styl/style.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    @using (Html.BeginForm("Login", "Giris", FormMethod.Post, new { @class = "box" }))
+                    {
+
+                        <h1>Rotasız Gezgin Admin Paneli</h1>
+                        <p class="Lütfen Giriş Yapınız" !></p>
+                        @Html.TextBoxFor(x => x.User, new { @placeholder = "Kullanıcı Adı" })
+                        @Html.PasswordFor(x => x.Password, new { @placeholder = "Şifre" })
+                  
+                        <a class="forgot text-muted" href="#">Şifremi Unuttum</a>
+                        <input type="submit" name="" value="Giriş" href="#">
+
+                        <div class="col-md-12">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

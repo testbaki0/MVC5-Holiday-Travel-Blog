@@ -1,0 +1,19 @@
+﻿@using TatilSeyahatMVC.Models.Siniflar
+@model List<Adres>
+<div class="contact-bottom">
+    <div class="contact-right" ">
+        <div class="contact-add">
+            @foreach (var i in Model)
+            {
+                <h3>@i.Header</h3>
+                <p> @i.AdresAcik</p>
+                <p>@i.Phone</p>
+                <p>Email:<a href="">@i.Mail</a></p>
+            }
+
+        </div>
+  
+    </div>
+   
+    <div class="clear"></div>
+</div>

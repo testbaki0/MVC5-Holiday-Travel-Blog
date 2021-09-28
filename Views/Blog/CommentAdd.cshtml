@@ -1,0 +1,13 @@
+﻿
+@model TatilSeyahatMVC.Models.Siniflar.Comment
+<div class="content-form">
+    <h3>Bir Yorum Yap</h3>
+   
+<form method="post">
+    <input type="text" name="Blogid" class="form-control"value="@ViewBag.deger"  required />
+    <input type="text" name="UserName" class="form-control" placeholder="Kullanıcı Adı" required />
+    <input type="text" name="Mail" class="form-control" placeholder="E-Posta" required />
+    <textarea class="form-control" name="Coment" placeholder="Yorumunuz"></textarea>
+    <input type="submit" style="color:black;font-weight:bold" value="YORUM YAP" class="btn btn-warning" />
+</form>
+</div>

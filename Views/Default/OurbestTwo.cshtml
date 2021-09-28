@@ -1,0 +1,17 @@
+﻿@using TatilSeyahatMVC.Models.Siniflar
+@model List<Blog>
+
+
+<div class="box1-left">
+    @foreach (var x in Model)
+    {
+        <div class="bot-img">
+            <img src="@x.BlogImage" href="/Blog/BlogDetail/@x.ID" />
+        </div>
+        <div class="bot-desc1">
+            <h3>@x.Header </h3>
+        </div>
+        <div class="clear"></div>
+    }
+
+</div>

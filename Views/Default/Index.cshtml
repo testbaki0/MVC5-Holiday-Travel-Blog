@@ -1,0 +1,108 @@
+﻿@using TatilSeyahatMVC.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TravelLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    
+    
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Kadrajımdan Dünya </h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/gls.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/fly.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlarım</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Gezi Rehberlerim</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Kiraladığım Araçlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider">
+                            <ul class="rslides" id="slider1" ;>
+                                @foreach (var i in Model)
+                                {
+                                    <li><img src="@i.BlogImage" style="height:365px; width:670px" alt="" title="test"></li>
+                                }
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Rüzgar Nereye Götürürse...</h3>
+                    <p>
+                        Rüzgarda oradan oraya sürüklenen bir yaprak gibi geçirdiğim 6 haftalık interrail yolculuğunun yorgunluğu, Oktoberfest’in son gününde hunharca içilen biralarla birleşince neredeyse tüm tren yolculuğunu uyuyarak geçiriyorum. Ekim ayının gece serinliğinde Berlin’e iniyorum. Tren garı Hauptbahnhof’dan hostele gitmek için otobüse kendimi zor atıyorum. Hostel resepsiyonunda önümde bir kız sakince işlemlerini yaptırıyor. Normalde aceleci olan ben yorgunluktan mıdır, gidilecek yeni bir şehrin kalmamasından mıdır sakince kızın işlemini bitirmesini bekliyorum. Sıra gelince pasaportumu uzatıp, kaydımı yaptırıp, odaya çıkıyorum.
+
+                        Odaya girdiğimde güdümlü füze gibi yatağıma yöneliyorum. Bu nedenle resepsiyonda önümde kayıt yaptıran kızla aynı odada kaldığımızı sonradan farkediyorum. 6 haftadır neredeyse her gün onlarca insanla yaptığım için refleks haline gelmiş yüzeysel hostel tanışma sorularına başlıyoruz karşılıklı. Adın ne, nerelisin, nereden geliyorsun, ne kadar kalacaksın diye uzayıp giden bir silsile bu.
+
+                        Katrin bir Alman. Ülkenin batısında adını hatırlamadığım bir şehirde sosyoloji okumuş. Yüksek lisans yapmak için geldiği Berlin’deki ilk günüymüş. Okula başlamak için birkaç hafta geç kalmış ve ev bulmaya fırsatı olmamış. Karşılıklı ayaküstü hikayelerimizi dinledikten sonra ben yorgunluktan, Katrin ise ertesi gün erkenden okula gideceğinden ranzalarımıza çekiliyoruz.
+                    </p>
+                </div>
+                    @Html.Action("HomeBlog", "Default")
+                <div class="grids">
+                    @Html.Action("TopBlog","Default")
+               
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

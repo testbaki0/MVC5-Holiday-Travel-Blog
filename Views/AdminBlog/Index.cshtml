@@ -1,0 +1,35 @@
+﻿@model TatilSeyahatMVC.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<div style="height:650px;width:350px; margin-left:auto;margin-right:auto;">
+    <h2>Yeni Blog Ekleme</h2>
+    <br />
+
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Başlık</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="Header">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Resim</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" name="BlogImage">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Tarih</label>
+            <input type="date" class="form-control" id="exampleFormControlInput1" name="BlogImage">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">İçerik</label>
+            <textarea class="form-control" name="Explanation" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div><button class="btn btn-primary">Blog Ekle</button></div>
+    </form>
+</div>

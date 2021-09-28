@@ -1,0 +1,28 @@
+﻿@model TatilSeyahatMVC.Models.Siniflar.Contact
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TravelLayout.cshtml";
+}
+
+<div class="contact">
+    <div class="wrap">
+        <div class="contact-top">
+            <h3>İletişim Formu</h3>
+            <h6> Her türlü görüş ve fikirlerinizi aşağıdaki formdan benimle paylaşabilirsiniz.</h6>
+        </div>
+    <div>
+        
+   
+            @Html.Action("MesajGonder","Contact")
+            
+    </div>
+        <br>
+        <br>
+   
+        <div class="clear"></div>
+        @Html.Action("Adresim","Contact")
+       
+      
+        <div class="clear"></div>
+    </div>
+</div>

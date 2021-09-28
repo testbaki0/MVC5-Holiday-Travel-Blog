@@ -1,0 +1,38 @@
+﻿@using TatilSeyahatMVC.Models.Siniflar
+@model List<Contact>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Mesajlar</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Kullanıcı</th>
+        <th>E-Posta</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+        <th>Görüntüle</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+<tr>
+    <td>@x.ID</td>
+    <td>@x.NameSurname</td>
+    <td>@x.Mail</td>
+    <td>@x.Subject</td>
+    <td>@x.Message</td>
+ 
+    <td><a href="#" class="btn btn-facebook">Görüntüle</a></td>
+    <td><a href="#" class="btn btn-danger">Sil</a></td>
+
+
+</tr>
+}
+
+
+
+</table>
+

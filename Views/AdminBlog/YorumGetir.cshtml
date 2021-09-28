@@ -1,0 +1,35 @@
+﻿@model TatilSeyahatMVC.Models.Siniflar.Comment
+@{
+    ViewBag.Title = "YorumGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<div style="height:650px;width:350px; margin-left:auto;margin-right:auto;">
+    <h2>Yorum Düzenleme</h2>
+    <br />
+
+
+    @using (Html.BeginForm("YorumGuncelle", "AdminBlog", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="exampleFormControlInput1">ID</label>
+            @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Kullanıcı</label>
+            @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Yorum</label>
+            @Html.TextAreaFor(x => x.Coment, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Blog</label>
+            @Html.TextBoxFor(x => x.Blog.Header, new { @class = "form-control", @readonly = "readonly" })
+        </div>
+     
+        <div><button class="btn btn-primary">Güncelle</button></div>
+    }
+</div>
